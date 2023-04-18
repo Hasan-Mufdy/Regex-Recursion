@@ -16,8 +16,8 @@ which end with io (example@example.io) */
 
 function ioEmail(email){
     // Add your logic.
-    
-    return (/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g.test(email)) && (/\.io$/.test(email));
+    let e = (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)) && (/\.io$/.test(email)) && !(/^[^@]*\.[^@]*@/.test(email));
+    return e;
 }
 
 /* You have a text that contain image names with their extention you need to write a function to 
